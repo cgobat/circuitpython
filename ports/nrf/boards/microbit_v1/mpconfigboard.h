@@ -35,9 +35,6 @@
 
 #define CIRCUITPY_BLE_CONFIG_SIZE       (12 * 1024)
 
-// The RUN_MIC pin
-#define MICROPY_HW_LED_STATUS          (&pin_P0_20)
-
 // Reduce nRF SoftRadio memory usage
 #define BLEIO_VS_UUID_COUNT 10
 #define BLEIO_HVN_TX_QUEUE_SIZE 2
@@ -53,5 +50,12 @@
 
 #define BOARD_HAS_32KHZ_XTAL (0)
 
-#define CIRCUITPY_CONSOLE_UART_TX (&pin_P0_06)
-#define CIRCUITPY_CONSOLE_UART_RX (&pin_P1_08)
+#define DEFAULT_I2C_BUS_SCL     (&pin_P0_00)
+#define DEFAULT_I2C_BUS_SDA     (&pin_P0_30)
+
+#define DEFAULT_SPI_BUS_MOSI    (&pin_P0_21)
+#define DEFAULT_SPI_BUS_MISO    (&pin_P0_22)
+#define DEFAULT_SPI_BUS_SCK     (&pin_P0_23)
+
+#define CIRCUITPY_CONSOLE_UART_TX (&pin_P0_24)
+#define CIRCUITPY_CONSOLE_UART_RX (&pin_P0_25)
